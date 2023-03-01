@@ -1,0 +1,291 @@
+@font-face {
+  font-family: arial2009;
+  src: url(fonts/bpg_arial_2009.ttf);
+}
+html {
+  background: #181818;
+  color: #fff;
+  font-family: arial2009;
+  font-size: 14px; }
+
+p {
+  font-family: arial2009;
+  font-size: 14px;
+  line-height: 2;
+  color: #bbb;
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+h1,
+.h1 {
+  font-size: 55px;
+  font-family: arial2009;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #fff;
+  margin-top: 0.7em;
+  margin-bottom: 1em; }
+
+h2,
+.h2 {
+  font-size: 14px;
+  font-family: arial2009;
+  font-weight: 600;
+  color: #feb960; }
+
+h3 {
+  font-size: 30px;
+  font-family: arial2009;
+  font-weight: 300;
+  line-height: 2.2;
+  margin: 0; }
+
+h4 {
+  margin-top: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+a,
+button {
+  cursor: pointer; }
+
+.section {
+  position: relative; }
+  .section.section-titled {
+    padding-top: 0; }
+    .section.section-titled .fp-tableCell {
+      vertical-align: top; }
+/*სათაურის ზოლი */
+.section-title, 
+.section-subtitle {
+  text-align: center; }
+/*ხაზი სათაურის ქვემოთ*/
+.section-title {
+  position: relative;
+  margin: 0 0 30px;
+  padding-top: 150px;
+  overflow: hidden; }
+  .section-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 120px;
+    margin: 0 -1px;
+    background-color: rgba(223, 153, 4, 0.3);
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0; }
+
+/* ქვესათაური */
+.section-subtitle {
+  max-width: 750px;
+  margin: 0 auto 78px;
+  font-size: 40px;
+  font-family: arial2009;
+  line-height: 1.625; }
+/*ბოქსი თანამშრომლების გასანაწილებლად */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 0; }
+ 
+.container-team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+/*გუნდის წევრები*/
+.team-member {
+  position: relative;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  grid-template-rows: 1fr;
+  padding-right: 10px;
+  height: 326px;
+  text-align: center;
+  border-style: solid;
+  border-color: #424242;
+  border-width: 0 3px ;
+  cursor: pointer;
+  transition: all 700ms ease-in-out; }
+  /*გაყოფა გუნდის წევრების ერთმანეთისგან*/
+  .team-member:nth-child(n + 5) {
+    border-top-width: 3px; }
+  /*უკიდურესი მარჯვენა გვერდი*/
+  .team-member:nth-child(4n) {
+    border-right-width: 0; 
+  }
+  /*უკიდურესი მარცხენა გვერდი*/
+  .team-member:nth-child(4n + 1) {
+    border-left-width: 0; 
+  }
+  /*ყვითელი ზოლი გადაბრუნების დროს*/
+  .team-member:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .team-member:hover:before {
+    animation: cornerUp 0.5s cubic-bezier(0, 0, 0.2, 1) forwards; }
+  .team-member:hover .team-member-basic {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: start;
+    align-self: start; }
+  .team-member:hover .team-member-avatar {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 2rem; }
+    /*პროფილის სურათი*/
+    .team-member:hover .team-member-avatar img {
+      width: 50px;
+      transition: none; }
+    /*თანამშრომლის ინფოს გადაბრუდნება*/
+  .team-member:hover .team-member-details {
+    transform: rotate(90deg);
+    white-space: nowrap;
+    text-align: left; }
+  .team-member:hover .team-member-text {
+    display: block;
+    height: inherit;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: start;
+    align-self: start;
+    opacity: 1; }
+/*სახელის გვარის და პროფილის სურათის გასწრორება*/
+.team-member-basic {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-content: center;
+  align-self: center; }
+
+.team-member-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem; }
+  .team-member-avatar img {
+    width: 120px;
+    border-radius:60%;
+    transition: width 0.5s ease-in-out; }
+
+.team-member-details {
+  transition: transform 0.5s ease-out; }
+/*თანამშრომლის სახელის სტილები*/
+.team-member-name {
+  margin-bottom: 0.75rem;
+  color: #feb960;
+  font-weight: 900;
+  text-transform: uppercase; }
+/*თანამშრომლის პოზიციის სტილი*/
+.team-member-title {
+  font-size: 15px; }
+/*გუნდის წევრის აღწერა*/
+.team-member-text {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  text-align: left;
+  transition: opacity 500ms ease-in-out 200ms; }
+  .team-member-text p {
+    font-size: 13px;
+    padding: 0.6rem 1rem; }
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+.section-contact,
+.section-footer {
+background-color: #343434; }
+
+.container-contact,
+.container-footer {
+max-width: 750px; }
+
+.container-footer {
+display: flex;
+margin-top: 120px;
+justify-content: space-between; }
+
+.contact-form {
+padding: 54px;
+background-color: #181818;
+box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3); }
+.contact-form .form-field-row {
+display: flex;
+flex-wrap: wrap; }
+.contact-form .form-field-row--submit {
+justify-content: center; }
+.contact-form .form-field-row--message {
+margin-top: 2rem; }
+.contact-form .form-field {
+width: calc(50% - 48px); }
+.contact-form .form-field:first-child {
+margin-right: 48px; }
+.contact-form .form-field:last-child {
+margin-left: 48px; }
+.contact-form .form-field.form-field-message {
+width: 100%;
+margin: 0; }
+.form-field {
+  position: relative; }
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    line-height: 3;
+    margin-bottom: 3.9rem;
+    border-width: 0 0 1px 0;
+    border-color: #5c5c5c;
+    background: transparent;
+    color: #fff;
+    transition: border-color 200ms ease-in-out; }
+    .form-field input:focus, .form-field input:active,
+    .form-field textarea:focus,
+    .form-field textarea:active {
+      outline: 0;
+      border-color: #feb960; }
+    .form-field input:invalid,
+    .form-field textarea:invalid {
+      outline: 0;
+      border-color: rgba(211, 0, 0, 0.8); }
+  .form-field label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding-top: 6px;
+    font-weight: normal;
+    transition: all 400ms ease-out; }
+  .form-field--active label, .form-field--filled label {
+    font-size: 0.8rem;
+    transform: translateY(-1rem);
+    color: #feb960; }
+    .btn {
+      width: auto;
+      padding: 1rem 3.2rem;
+      border: 0;
+      font-size: 17px;
+      line-height: 2.2rem;
+      transition: background-color 200ms ease-in-out; }
+    
+    .btn-primary {
+      background: #feb960;
+      color: #181818; }
+      .btn-primary:hover {
+        background-color: #f5951a; }
+    
+    .btn-arrow span:after {
+      content: url("../assets/arrow-black.png");
+      margin-left: 8px; }

@@ -1,0 +1,161 @@
+@font-face {
+  font-family: nino-mtavruli-normal;
+  src: url(fonts/bpg_nino_mtavruli_normal.ttf);
+}
+
+html {
+  font-size: 88.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --global-bg: #d8d8d8;
+  --global-color: rgb(105, 105, 105);
+  --global-blue:  #feb960;
+  --dark-color: rgb(34, 31, 31);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  
+  font-family: nino-mtavruli-normal, sans-serif;
+  color: var(--global-color);
+  line-height: 1.4;
+  font-size: 1.4rem;
+  background: var(--global-bg);
+}
+
+/* ბოქს საიზი */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ღილაკი 1 */
+.btn {
+  padding: calc(0.4vw + 5px) calc(1.2vw + 8px);
+  border-radius: 0.4rem;
+  border: none;
+  font-weight: 800;
+  font-size: calc(0.4vw + 8px);
+  cursor: pointer;
+  
+}
+/* სურათიი */
+img {
+  width: 100%;
+}
+
+/* ტექსტის ფერები. ლურჯს ვტოვებთ ყვითელად. */
+.blue {
+  background-color:  #feb960;
+  color: rgb(94, 94, 94);
+}
+
+.grey {
+  background-color: #ffffff;
+  color: rgb(128, 123, 123);
+}
+
+
+section {
+  padding: 3rem 0;
+}
+
+/* გამყოფი სურათით */
+.border-bg {
+  background-image: url(../assets/Border-BG.jpg);
+  opacity: 0.5;
+  background-size: 6.3rem auto;
+  transform: rotateY(180deg);
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid rgb(235, 147, 66);
+  background-color: rgb(174, 225, 235);
+  border-radius: 20px; 
+  box-shadow: 0 19px 38px rgba(131, 60, 60, 0.3), 0 15px 12px rgba(0, 0, 0, .22);
+}
+.border-bg > * {
+  display: inline-block;
+  background-color: #0db2ff;
+  transform: rotateY(-180deg);
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  margin: 0;
+  font-weight: 400;
+  border-radius: 20px; 
+  color: rgb(255, 255, 255);
+}
+/*გამყოფი ზოლის შიდა დასახელება*/
+.hr-bg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline-heading {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.no-italic {
+  font-style: normal;
+}
+
+/* ფონტის ზომები*/
+h1 {
+  font-size: calc(1.1vw + 10px);
+}
+h2 {
+  font-size: calc(0.8vw + 10px);
+}
+h3 {
+  font-size: calc(0.3vw + 12px);
+}
+.h3 {
+  color: rgb(8, 8, 8);
+}
+h4 {
+  font-size: calc(0.4vw + 12px);
+}
+
+li {
+  font-size: calc(0.3vw + 10px);
+  list-style: none;
+}
+
+p {
+  font-size: calc(0.25vw + 13px);
+}
+
+a {
+  text-decoration: none;
+  color: var(--global-color);
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box-3-col {
+  flex: 0 1 375px;
+  margin-bottom: 4.5rem;
+  position: relative;
+}
+
+.box-4-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 300px;
+  padding: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+

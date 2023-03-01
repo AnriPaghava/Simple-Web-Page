@@ -1,0 +1,72 @@
+
+.recent-work {
+  padding-top: 2.5rem;
+}
+/*დაბოლოება ბოქსების*/
+.recent-work-boxes .box-3-col::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: solid 45px white;
+  border-right: solid 45px transparent;
+  top: 100%;
+  left: 0;
+}
+
+.recent-work-boxes .box-1,
+.recent-work-boxes .box-2{
+  background: #fff;
+  box-shadow: -1px 14px 32px -10px rgba(0, 0, 0, 0.61);
+}
+
+.recent-work-boxes .box-3-col h4 {
+  color: var(--dark-color);
+  padding: 1.2rem 2rem 0 2rem;
+}
+.recent-work-boxes .box-3-col p {
+  font-style: italic;
+  padding: 0.7rem 2rem 3rem 2rem;
+}
+.link {
+  padding: 5px 0; }
+  .link a,
+  .link span {
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-right: 12px;
+    white-space: nowrap;
+    cursor: pointer; }
+  .link-arrow-right a::after,
+  .link-arrow-right span::after {
+    content: url("../assets/arrow-black.png");
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 400ms ease-out; }
+  .link-arrow-right a:hover::after, .link-arrow-right a:focus::after,
+  .link-arrow-right span:hover::after,
+  .link-arrow-right span:focus::after {
+    transform: translateX(20px); }
+  .link-arrow-left a::before,
+  .link-arrow-left span::before {
+    content: url("../assets/arrow-black.png");
+    display: inline-block;
+    margin-right: 6px;
+    transform: translateX(0) rotate(180deg);
+    transition: transform 400ms ease-out; }
+  .link-arrow-left a:hover::before, .link-arrow-left a:focus::before,
+  .link-arrow-left span:hover::before,
+  .link-arrow-left span:focus::before {
+    transform: translateX(-6px) rotate(180deg); }
+   
+.btn-primary {
+  background: #feb960;
+  color: #181818; }
+  .btn-primary:hover {
+    background-color: #f5951a; }
+.ah{
+  margin: 20px;
+}
+.textarrow{
+  color:#f5951a;
+}
